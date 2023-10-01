@@ -5,4 +5,8 @@ Log Book
 ====================================================
 ## [1][2] - Setting Up
 
-Includes the initial ERP Database Structure in MYSQL, Initial Setup of The Django Server. Update to the README file. Inclusion of Log Book.
+Includes the initial ERP Database Structure in MYSQL, Initial Setup of The Django Server. Update to the README file. Inclusion of Log Book. Inclusion of activate_env.ps1.
+
+## [3] - Student App
+
+Initialised Student App
