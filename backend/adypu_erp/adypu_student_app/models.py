@@ -48,6 +48,7 @@ class StudentData(models.Model):
         ("Y", "YES"),
         ("N", "NO")
     ]
+    
     URN = models.CharField(max_length=17, primary_key=True)
     First_Name = models.CharField(max_length=45)
     Middle_Name = models.CharField(max_length=45, null=True)
@@ -78,6 +79,7 @@ class StudentData(models.Model):
     Mother_Phone_No = models.IntegerField(null=True)
     Family_Income = models.IntegerField()
     Education_Loan_Availed = models.CharField(choices=EDUCATION_LOAN_CHOICES, max_length=1)
-    Photo = models.BinaryField()
+    Photo = models.ImageField()
     
-    
+    def __str__(self):
+        return self.URN
