@@ -58,7 +58,7 @@ class StudentData(models.Model):
     DOB = models.DateField()
     Local_Address = models.CharField(max_length=225)
     Permanent_Address = models.CharField(max_length=225)
-    Email = models.CharField(max_length=30)
+    Email = models.EmailField(max_length=30)
     Student_Phone_No = models.BigIntegerField()
     Emergency_Phone = models.BigIntegerField()
     Aadhar_Card_No = models.BigIntegerField()
@@ -79,7 +79,11 @@ class StudentData(models.Model):
     Mother_Phone_No = models.BigIntegerField(null=True)
     Family_Income = models.BigIntegerField()
     Education_Loan_Availed = models.CharField(choices=EDUCATION_LOAN_CHOICES, max_length=1)
-    Photo = models.ImageField()
+    Photo = models.ImageField(upload_to='uploads/')
     
     def __str__(self):
         return self.URN
+    
+    def get_img_path(instance, filename):
+        filename = instance.First_Name
+        return "uploads/{0}/{1}".format(instance.URN, filename)
