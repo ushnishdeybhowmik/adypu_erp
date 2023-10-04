@@ -38,4 +38,13 @@ def student_detail(request, pk):
         student.delete()
         return HttpResponse(status=204)
     
-        
+@csrf_exempt
+
+def create_student(request):
+    if request.method == 'POST':
+        data = JSONParser().parse(request)
+        student = StudentData()
+        serializer = StudentDataSerializer(student, data=data)
+        if serializer.is_valid():
+            serializer.save()
+            return HttpResponse(status=200)

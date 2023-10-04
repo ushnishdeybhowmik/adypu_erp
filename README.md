@@ -22,6 +22,6 @@ Log Book
 
 Includes the initial ERP Database Structure in MYSQL, Initial Setup of The Django Server. Update to the README file. Inclusion of Log Book. Inclusion of activate_env.ps1.
 
-## [3][4][5][6][7][8][9][10][11] - Student App
+## [3][4][5][6][7][8][9][10][11][12][13] - Student App
 
-Initialised Student App. Updated student_data table structure. Updated Models. Completed SQL Migration to MySQL DB. Registered Model in Django Admin. Added Serializers. Created First API.
+Initialised Student App. Updated student_data table structure. Updated Models. Completed SQL Migration to MySQL DB. Registered Model in Django Admin. Added Serializers. Created First API. Create_User Request Handler Initialized.
